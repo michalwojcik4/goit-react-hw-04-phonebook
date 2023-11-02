@@ -11,7 +11,9 @@ export function ContactList({ contacts, deleteContact }) {
       <ul className={css.list}>
         {contacts.map(contact => (
           <li className={css.list__item} key={contact.id}>
-            <p className={css.list__text}>{contact.name}: {contact.number}{' '}</p>
+            <p className={css.list__text}>
+              {contact.name}: {contact.number}{' '}
+            </p>
             <button
               className={css.list__button}
               type="button"
@@ -34,5 +36,5 @@ ContactList.propTypes = {
       number: PropTypes.string.isRequired,
     })
   ),
-  deleteContact: PropTypes.func.isRequired,
+  deleteContact: PropTypes.func,
 };
